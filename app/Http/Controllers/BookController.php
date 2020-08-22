@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
 
 class BookController extends Controller
 {
@@ -13,7 +14,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        return view ('Book.index')->with('BookList',Book::all());
     }
 
     /**
@@ -23,7 +24,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('Book.create');
     }
 
     /**
@@ -34,7 +35,15 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $book = new Book();
+        $book->BookName = request('BookName');
+        $book->price = request('price');
+        $book->Description = request('Description');
+        $book->City = request('City');
+
+        $book->save();
+
+        return redirect('/');
     }
 
     /**

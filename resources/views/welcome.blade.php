@@ -84,14 +84,21 @@ background-repeat: no-repeat;
 background-size: cover; 
 
 }
+
+.page-footer{
+    background:#eee;
+    padding:20px;
+    text-align:center;
+}
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
        @if (Route::has('login'))
                 <div class="top-right links">
-                <a href="/books">Books</a>
+                <a href="/Book/index">Books</a>
                 <a href="/contect">contact</a>
+                
                 
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -117,18 +124,18 @@ background-size: cover;
                 </div>
 
                 <div class="links">
-                    <a href="/books">Riyadh</a>
-                    <a href="https://laracasts.com">Jeddah</a>
-                    <a href="https://laravel-news.com">Makkah</a>
-                    <a href="https://blog.laravel.com">Dammam</a>
-                    <a href="https://nova.laravel.com">Madinah</a>
-                    <a href="https://forge.laravel.com">Tabuk</a>
-                    <a href="https://vapor.laravel.com">Khobar</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/Book/index">Riyadh</a>
+                    <a href="/Book/index">Jeddah</a>
+                    <a href="/Book/index">Makkah</a>
+                    <a href="/Book/index">Dammam</a>
+                    <a href="/Book/index">Madinah</a>
+                    <a href="/Book/index">Tabuk</a>
+                    <a href="/Book/index">Khobar</a>
+                    <a href="/Book/index">Test</a>
                 </div>
             </div>
         </div>
-   <!-- Footer -->
+   <!-- Footerr -->
 <footer class="page-footer font-small teal pt-4">
 
 <!-- Footer Text -->

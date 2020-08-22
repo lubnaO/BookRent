@@ -77,7 +77,7 @@
                 <a href="/welcome">Home</a>
                 <a href="/contact">Contact</a>
                 <a href="/callus">Call us</a>
-                <a href="/team">Team</a>
+                <a href="/team">Publish Book</a>
            </div>
             
 

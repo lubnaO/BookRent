@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/Book/create', 'BookController@create');
+Route::get('/Book/index', 'BookController@index');
+Route::post('/Book', 'BookController@store');
+
 Route::get('/books', function () {
     return view('books');
 });

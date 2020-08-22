@@ -17,7 +17,10 @@ class CreateBooksTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('BookName');
-            $table->integer('Price');
+            $table->integer('price');
+            $table->string('Description');
+            $table->string('City');
+
         });
     }
 

@@ -26,6 +26,11 @@
  .card-header{
      background-color:#F9EBEA ;
  }
+ .formcard{
+margin-left:150px;
+margin-right:150px;
+margin-top:60px;
+ }
             html, body {
                 background-color: #fff;
                 background-color:#F9EBEA ;
@@ -36,21 +41,32 @@
                 margin: 0;
             }
 
-           body{
+            /** body{
             background-color:#F9EBEA ;
             background-position: center ;
             background-repeat: no-repeat;
             background-size: cover; 
 
+}*/      
+body{
+background-image: url("/images/backfirst.jpg");
+background-position: center ;
+background-repeat: no-repeat;
+background-size: cover; 
+
 }
+.collapse navbar-collapse{
+
+}
+
 </style>
 
 <!-- Style end here-->
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light  shadow-sm">
+    <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     RentBookLibrary
                 </a>
@@ -58,7 +74,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse flex-center" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
@@ -67,6 +83,8 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+                 
+                
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -75,12 +93,20 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Book/create">{{ __('Publish Book') }}</a>
+                                </li>
+
+                                
                             @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
+
+                             
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
