@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\Http\Requests\BookRequest;
 
 class BookController extends Controller
 {
@@ -33,17 +34,28 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookRequest $request)
     {
-        $book = new Book();
+        
+        Book::create([
+            'BookName' => $request->BookName,
+            'price' => $request->price,
+            'Description' => $request->Description,
+            'City' => $request->City,
+            'image' => $request->image->store('images', 'public')
+         ]);
+
+         session()->flash('success', 'Publish created successfully');
+
+         return redirect(route('Book.index'));
+        
+        /**$book = new Book();
         $book->BookName = request('BookName');
         $book->price = request('price');
         $book->Description = request('Description');
         $book->City = request('City');
-
-        $book->save();
-
-        return redirect('/');
+      $book->save();
+       return redirect('/');*/
     }
 
     /**

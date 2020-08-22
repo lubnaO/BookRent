@@ -20,6 +20,7 @@ class CreateBooksTable extends Migration
             $table->integer('price');
             $table->string('Description');
             $table->string('City');
+            $table->string('image');
 
         });
     }

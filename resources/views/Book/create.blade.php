@@ -7,8 +7,8 @@
     Publish to rent a book!
   </div>
   <div class="card-body">
-
-  <form action="/Book" method="POST"> 
+  <form action ="{{ route('Book.store')}}" method="POST" enctype="multipart/form-data">
+  <!--<form action="/Book" method="POST">-->
   @csrf
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -22,7 +22,7 @@
   </div>
   <div class="form-group">
     <label for="inputdescription">Description</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="" name="Description">
+    <textarea type="text" class="form-control" id="inputAddress" placeholder="" name="Description"></textarea>
   </div>
  
   <div class="form-row">
@@ -32,7 +32,13 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Publish</button>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputimage">Upload Image For Book</label>
+      <input type="file" class="form-control" id="inputCity" name="image" >
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" name="success">Publish</button>
 </form>
 </div>
 

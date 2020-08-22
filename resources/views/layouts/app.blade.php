@@ -31,7 +31,7 @@ margin-left:150px;
 margin-right:150px;
 margin-top:60px;
  }
-            html, body {
+  html, body {
                 background-color: #fff;
                 background-color:#F9EBEA ;
                 color: #636b6f;
@@ -58,6 +58,24 @@ background-size: cover;
 .collapse navbar-collapse{
 
 }
+.nav-item{
+    color:#ffffff;
+}
+.navbar-expand-md{
+    color:#ffffff;
+}
+.navbar-brand{
+    color:#ffffff;
+}
+.btn-primary{
+  background-color: #D98880 ; /* Dark Pink  #D98880  #F2D7D5  */
+  color: white;
+}
+.card-header{
+    background-color: #F2D7D5  ; /* Dark Pink */
+  color: white;
+
+}
 
 </style>
 
@@ -67,7 +85,7 @@ background-size: cover;
     <div id="app">
     <nav class="navbar navbar-expand-md navbar-light  shadow-sm">
     <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}"  style="color:#ffffff">
                     RentBookLibrary
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -87,18 +105,21 @@ background-size: cover;
                 
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}" style="color:#ffffff">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}" style="color:#ffffff">{{ __('Register') }}</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Book/create">{{ __('Publish Book') }}</a>
+                                    <a class="nav-link" href="/Book/create" style="color:#ffffff">{{ __('Publish Book') }}</a>
                                 </li>
 
-                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/welcome" style="color:#ffffff">{{ __('Home') }}</a>
+                                </li>
+
                             @endif
                         @else
                             <li class="nav-item dropdown">

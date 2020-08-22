@@ -98,8 +98,6 @@ background-size: cover;
                 <div class="top-right links">
                 <a href="/Book/index">Books</a>
                 <a href="/contect">contact</a>
-                
-                
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else

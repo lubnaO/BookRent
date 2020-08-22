@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/Book/create', 'BookController@create');
 Route::get('/Book/index', 'BookController@index');
-Route::post('/Book', 'BookController@store');
+Route::post('/Book', 'BookController@store');       //here 3 create+ index+ store code for english tutorial old
 
 Route::get('/books', function () {
     return view('books');
@@ -32,3 +32,4 @@ Route::get('/welcome', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/Book', 'BookController');
