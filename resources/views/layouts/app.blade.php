@@ -23,22 +23,20 @@
  .card{
      margin-top:80px;
  }
- .card-header{
-     background-color:#F9EBEA ;
- }
+
  .formcard{
 margin-left:150px;
 margin-right:150px;
 margin-top:60px;
  }
   html, body {
-                background-color: #fff;
-                background-color:#F9EBEA ;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+ background-color: #fff;
+  background-color:#F9EBEA ;
+  color: #636b6f;
+ font-family: 'Nunito', sans-serif;
+font-weight: 200;
+ height: 100vh;
+margin: 0;
             }
 
             /** body{
@@ -72,7 +70,7 @@ background-size: cover;
   color: white;
 }
 .card-header{
-    background-color: #F2D7D5  ; /* Dark Pink */
+    background-color: #F1DBD9  ; /* Dark Pink */
   color: white;
 
 }
@@ -111,7 +109,7 @@ background-size: cover;
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}" style="color:#ffffff">{{ __('Register') }}</a>
                                 </li>
-
+                                    
                                 <li class="nav-item">
                                     <a class="nav-link" href="/Book/create" style="color:#ffffff">{{ __('Publish Book') }}</a>
                                 </li>
@@ -119,7 +117,7 @@ background-size: cover;
                                 <li class="nav-item">
                                     <a class="nav-link" href="/welcome" style="color:#ffffff">{{ __('Home') }}</a>
                                 </li>
-
+                                
                             @endif
                         @else
                             <li class="nav-item dropdown">

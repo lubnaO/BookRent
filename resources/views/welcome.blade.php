@@ -50,7 +50,7 @@
             .top-left {
                 position: absolute;
                 right: 10px;
-                top: 18px;
+                top: 1px;
                 
             }
 
@@ -97,7 +97,8 @@ background-size: cover;
        @if (Route::has('login'))
                 <div class="top-right links">
                 <a href="/Book/index">Books</a>
-                <a href="/contect">contact</a>
+                <a href="/contect">Contact</a>
+                <a href="/about">About Us</a>
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -118,7 +119,7 @@ background-size: cover;
 
             <div class="content">
                 <div class="title m-b-md">
-                  Welecome to Books Rent
+                  Rent Book Library
                 </div>
 
                 <div class="links">
@@ -129,7 +130,7 @@ background-size: cover;
                     <a href="/Book/index">Madinah</a>
                     <a href="/Book/index">Tabuk</a>
                     <a href="/Book/index">Khobar</a>
-                    <a href="/Book/index">Test</a>
+                    <a href="/Book/index">Abha</a>
                 </div>
             </div>
         </div>

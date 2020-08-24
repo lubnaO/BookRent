@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/Book/create', 'BookController@create');
 Route::get('/Book/index', 'BookController@index');
-Route::post('/Book', 'BookController@store');       //here 3 create+ index+ store code for english tutorial old
+Route::post('/Book', 'BookController@store');       //here create+ index+ store code for Book Controller.
 
 Route::get('/books', function () {
     return view('books');

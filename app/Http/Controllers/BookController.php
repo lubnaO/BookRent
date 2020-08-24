@@ -48,14 +48,7 @@ class BookController extends Controller
          session()->flash('success', 'Publish created successfully');
 
          return redirect(route('Book.index'));
-        
-        /**$book = new Book();
-        $book->BookName = request('BookName');
-        $book->price = request('price');
-        $book->Description = request('Description');
-        $book->City = request('City');
-      $book->save();
-       return redirect('/');*/
+      
     }
 
     /**

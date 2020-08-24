@@ -16,7 +16,7 @@
 
   <thead>
   <tr class="table-light"> 
-     <th scope="col">Book Image</th>
+     <th scope="col">Book </th>
       <th scope="col">Book Name</th>
       <th scope="col">Description</th>
       <th scope="col">City</th>
